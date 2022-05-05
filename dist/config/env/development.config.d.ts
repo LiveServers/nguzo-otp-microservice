@@ -1,0 +1,23 @@
+declare const _default: {
+    QUEUE_NAME: string;
+    SERVER_PORT: string;
+    PORT: string;
+    SERVER_PORT_TCP: string;
+    MONGODB_CONNECTION_URI: string;
+    MONGO_INITDB_ROOT_USERNAME: string;
+    MONGO_INITDB_ROOT_PASSWORD: string;
+    ACCESS_TOKEN_EXPIRATION_TIME: string;
+    ACCESS_TOKEN_SECRET: string;
+    SECRET: string;
+    REFRESH_TOKEN_EXPIRATION_TIME: string;
+    REFRESH_TOKEN_SECRET: string;
+    NODE_ENV: string;
+    ENCRYPTION_KEY: string;
+    INITIALIZATION_VECTOR: string;
+    AWS_ACCESS_KEY_ID: string;
+    AWS_SECRET_KEY: string;
+    AWS_REGION: string;
+    API_VERSION: string;
+    AWS_EMAIL_SOURCE: string;
+};
+export default _default;

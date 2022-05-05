@@ -1,5 +1,5 @@
 import { Controller, Post, Body, HttpCode } from '@nestjs/common';
-import { EventPattern, MessagePattern, Payload, Ctx  } from '@nestjs/microservices';
+import { MessagePattern, Payload  } from '@nestjs/microservices';
 import { OtpService } from '../service/otp.service';
 
 type OtpType = "Numerical" | "Alphanumeric";
@@ -33,9 +33,14 @@ export class OtpController {
   }
 
 
-  @EventPattern('generate-otp')
-  replaceEmoji(@Payload() data: string): any {
+  @MessagePattern('generate-otp')
+  generateOtpEvent(@Payload() data: string): any {
     return this.otpService.generateOtp(data);
+  }
+
+  @MessagePattern('validate-otp')
+  validateOtpEvent(@Payload() data: string): any {
+    return this.otpService.validateOtp(data);
   }
 
 }
